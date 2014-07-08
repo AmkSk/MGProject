@@ -97,7 +97,8 @@ public class UniversalAdapter extends ArrayAdapter<MGEntry>{
             Exhibition exhibition = (Exhibition) entry;
             Date date = exhibition.getDateFrom();;
 
-            if (exhibition.getDateFrom().equals(exhibition.getDateTo())){
+            if (appManager.getDateString(exhibition.getDateFrom()).equals(
+                    appManager.getDateString(exhibition.getDateTo()))){
                 holder.listItemDate.setText(appManager.getDateString(date));
             }
             else {

@@ -67,16 +67,16 @@ public class CalendarActivity extends Activity{
 
     private void initListView(){
         this.listView = (ListView)findViewById(R.id.calendar_ListView);
-//        this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Building selectedBuilding = (Building) adapterView.getItemAtPosition(i);
-//                Intent intent = new Intent(getApplicationContext(), BuildingActivity.class);
-//                appManager.setSelectedBuilding(selectedBuilding);
-//                startActivity(intent);
-//                appManager.log("Activity launch", "INFO: Launching ActualActivity");
-//            }
-//        });
+        this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Exhibition selectedExhibition = (Exhibition) adapterView.getItemAtPosition(i);
+                Intent intent = new Intent(getApplicationContext(), EntryActivity.class);
+                // we set, what exhibition was chosen
+                appManager.setSelectedEntry(selectedExhibition);
+                startActivity(intent);
+            }
+        });
 
         CalendarAdapter adapter = new CalendarAdapter(this,
                 R.layout.calendar_item_row, itemList);

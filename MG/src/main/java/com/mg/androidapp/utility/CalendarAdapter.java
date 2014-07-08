@@ -16,6 +16,7 @@ import com.mg.objects.Building;
 import com.mg.objects.Exhibition;
 import com.mg.objects.MGEntry;
 
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -64,6 +65,7 @@ public class CalendarAdapter extends ArrayAdapter<Exhibition> {
             holder.dateHeader = (TextView)row.findViewById(R.id.calendar_dateHeaderText);
             holder.itemHeader = (TextView)row.findViewById(R.id.calendar_itemText);
             holder.itemDate = (TextView)row.findViewById(R.id.calendar_itemDateText);
+            holder.separator = (View)row.findViewById(R.id.calendar_separator);
 
             row.setTag(holder);
         }
@@ -72,9 +74,15 @@ public class CalendarAdapter extends ArrayAdapter<Exhibition> {
             holder = (ItemHolder)row.getTag();
         }
 
-//        holder.itemHeader.setText(data.get(position).getName());
+        holder.separator.setVisibility(View.VISIBLE);
+        holder.dateHeader.setVisibility(View.VISIBLE);
 
-        fillRowWithData(holder,position);
+        Exhibition item = data.get(position);
+
+        fillRowWithData(position, holder, item);
+        updateCalendarItems(position, item, holder);
+        addColor(item, holder);
+
         return row;
     }
 
@@ -83,21 +91,54 @@ public class CalendarAdapter extends ArrayAdapter<Exhibition> {
     // Methods
     // =============================================================================
 
-    private void fillRowWithData(ItemHolder holder, int position){
+    private void fillRowWithData(int position,ItemHolder holder, Exhibition item){
 
-        Exhibition item = data.get(position);
+        if (appManager.getAppLanguage().equals("cs")){
+            holder.itemHeader.setText(item.getName());
+        }
+        else {
+            holder.itemHeader.setText(item.getEngName());
+        }
 
-        holder.itemHeader.setText(item.getName());
         holder.itemDate.setText(appManager.getDateString(item.getDateFrom())
-        + " - " +data.get(position).getDateTo());
+        + " - " + appManager.getDateString(data.get(position).getDateTo()));
         holder.dateHeader.setText(appManager.getDateStringShort(item.getDateFrom()));
-
         holder.itemHeader.setTypeface(appManager.getFontBold());
     }
 
-    // =============================================================================
-    // Subclasses
-    // =============================================================================
+    private void updateCalendarItems(int position, Exhibition item, ItemHolder holder){
+        if (position == data.size()-1 || position == 0)
+            return;
+
+        Exhibition itemAfter = data.get(position+1);
+        Exhibition itemBefore = data.get(position-1);
+
+        String dateAfter = appManager.getDateString(itemAfter.getDateFrom());
+        String date = appManager.getDateString(item.getDateFrom());
+        String dateBefore = appManager.getDateString(itemBefore.getDateFrom());
+
+        if(dateAfter.equals(date)) {
+            holder.separator.setVisibility(View.INVISIBLE);
+        }
+
+        if(dateBefore.equals(date)){
+            holder.dateHeader.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    private void addColor(Exhibition item, ItemHolder holder){
+
+        if (!item.getBuildingIdList().isEmpty()){
+            for (MGEntry bldng : appManager.getBuildingList()){
+                Building building = (Building) bldng;
+                if (item.getBuildingId(0).equals(building.getName())){
+                    holder.dateHeader.setTextColor(building.getColor());
+                    holder.itemHeader.setTextColor(building.getColor());
+                    holder.itemDate.setTextColor(building.getColor());
+                }
+            }
+        }
+    }
 
     // =============================================================================
     // Subclasses
@@ -108,5 +149,6 @@ public class CalendarAdapter extends ArrayAdapter<Exhibition> {
         TextView dateHeader;
         TextView itemHeader;
         TextView itemDate;
+        View separator;
     }
 }
