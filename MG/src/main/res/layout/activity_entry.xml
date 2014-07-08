@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <include
+        android:id="@+id/header_entry"
+        layout="@layout/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+       />
+
+    <include
+        android:id="@+id/menu_entry"
+        layout="@layout/menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/menu_entry"
+        android:layout_below="@id/header_entry"
+        android:id="@+id/entry_scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/margins">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Nadpis"
+                android:id="@+id/entry_header"
+                android:gravity="left"
+                android:textSize="@dimen/exhibition_titleSize"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/exhibitions_dateTextView"
+                android:layout_below="@id/entry_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Since 12/12/1212 until 23/02/2004"
+                android:textColor="@android:color/black"/>
+
+            <Button
+                android:id="@+id/entry_button_building"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exhibitions_dateTextView"
+                android:background="@drawable/gray_button"
+                android:text="Building"
+                android:textColor="@android:color/black"
+                android:drawableRight="@drawable/show_more"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:onClick="building_onClick" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/entry_gallery"
+                android:layout_below="@id/entry_button_building"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/galleryHeight"/>
+
+            <TextView
+                android:id="@+id/entry_InfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entry_gallery"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"
+                android:text="Info"/>
+
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/entry_youtube_view"
+                android:layout_below="@id/entry_InfoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+
+
+            <Button
+                android:id="@+id/exhibiton_button_linkFb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entry_youtube_view"
+                android:background="@drawable/gray_button"
+                android:text="@string/linkFb"
+                android:textColor="@android:color/black"
+                android:drawableLeft="@drawable/link_icon"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:onClick="linkFb_onClick" />
+
+            <Button
+                android:id="@+id/entry_button_linkTw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exhibiton_button_linkFb"
+                android:background="@drawable/gray_button"
+                android:text="@string/linkTw"
+                android:textColor="@android:color/black"
+                android:drawableLeft="@drawable/link_icon"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:onClick="linkTw_onClick" />
+
+            <Button
+                android:id="@+id/entry_button_shareFb"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entry_button_linkTw"
+                android:background="@drawable/gray_button"
+                android:text="@string/shareFb"
+                android:textColor="@android:color/black"
+                android:drawableLeft="@drawable/fb_logo"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:onClick="shareFb_onClick" />
+
+
+            <Button
+                android:id="@+id/entry_button_shareTw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entry_button_shareFb"
+                android:background="@drawable/gray_button"
+                android:text="@string/shareTw"
+                android:textColor="@android:color/black"
+                android:drawableLeft="@drawable/tw_logo"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:onClick="shareTw_onClick" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

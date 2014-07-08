@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <include layout="@layout/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_actual"/>
+
+    <include android:id="@+id/menu_actual"
+        layout="@layout/menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+    <ProgressBar
+        android:id="@+id/actual_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/header_actual"
+        android:layout_above="@id/menu_actual"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+        <Button
+            android:id="@+id/actual_button_exhibitions"
+            android:padding="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_button"
+            android:text="@string/exhibitions"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/show_more"
+            android:drawableLeft="@drawable/ic_launcher"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
+            android:onClick="exhibitions_onClick" />
+
+        <Button
+            android:id="@+id/actual_button_actualities"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_button"
+            android:text="@string/eventsAndActualities"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/show_more"
+            android:padding="10dp"
+            android:drawableLeft="@drawable/ic_launcher"
+            android:drawablePadding="10dp"
+            android:gravity="left|center_vertical"
+            android:onClick="actualities_onClick" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

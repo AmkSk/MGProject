@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/amk/Documents/workspace/MGProject/MG/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.1-01dbacf863968f214709d3fb46ae79878f878a20.jar"
+        jar="/Users/amk/Documents/workspace/MGProject/MG/libs/universal-image-loader-1.9.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="296dfb44fbf31397c0306e60cb62e06ca40df07f"/>
+    <item
+        dex="/Users/amk/Documents/workspace/MGProject/MG/build/intermediates/pre-dexed/debug/YouTubeAndroidPlayerApi-483932e8382f6acb5b91ada508e4393385aa99c7.jar"
+        jar="/Users/amk/Documents/workspace/MGProject/MG/libs/YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="29ccfbddf99584bddbaab62c0cf50dcd1c564e43"/>
+    <item
+        dex="/Users/amk/Documents/workspace/MGProject/MG/build/intermediates/pre-dexed/debug/classes-cc2383c3e98e68775b70d10eeaa8c3d5a372129e.jar"
+        jar="/Users/amk/Documents/workspace/MGProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
+        dex="/Users/amk/Documents/workspace/MGProject/MG/build/intermediates/pre-dexed/debug/dd-plist-79ff7e19d1bcfd7205560e466f4b03f557d500e4.jar"
+        jar="/Users/amk/Documents/workspace/MGProject/MG/libs/dd-plist.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f20e82467afa621db623c8e33be18783a57af1c4"/>
+    <item
+        dex="/Users/amk/Documents/workspace/MGProject/MG/build/intermediates/pre-dexed/debug/classes-30d2a162796f80a46fafe6fe2cdaa97a851ab6ed.jar"
+        jar="/Users/amk/Documents/workspace/MGProject/build/intermediates/exploded-aar/com.google.android.gms/play-services/3.1.36/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="7421dcb3ed9db47a59ec618e2398f0df65c2d480"/>
+    <item
+        dex="/Users/amk/Documents/workspace/MGProject/MG/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar"
+        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+
+</pre-dex-items>

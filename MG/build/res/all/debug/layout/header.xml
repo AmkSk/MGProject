@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+    <ImageButton
+            android:id="@+id/logoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/logoButton"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:text="Moravská galerie v Brně"
+        android:textColor="#000"/>
+
+    <View
+            android:id="@+id/separatorHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/logoButton"
+            android:layout_marginTop="7dp"/>
+
+</RelativeLayout><!-- From: file:/Users/amk/Documents/workspace/MGProject/MG/src/main/res/layout/header.xml -->

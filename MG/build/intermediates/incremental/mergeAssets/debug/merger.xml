@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="19.1.0" >
+        <source path="/Users/amk/Documents/workspace/MGProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/amk/Documents/workspace/MGProject/MG/src/main/assets" >
+            <file
+                name="fonts/ArialNarrow.ttf"
+                path="/Users/amk/Documents/workspace/MGProject/MG/src/main/assets/fonts/ArialNarrow.ttf" />
+            <file
+                name="fonts/ArialNarrowBold.ttf"
+                path="/Users/amk/Documents/workspace/MGProject/MG/src/main/assets/fonts/ArialNarrowBold.ttf" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/amk/Documents/workspace/MGProject/MG/src/debug/assets" />
+    </dataSet>
+
+</merger>

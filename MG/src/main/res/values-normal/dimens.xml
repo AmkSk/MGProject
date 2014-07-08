@@ -1,0 +1,16 @@
+<resources>
+    <!-- normal values -->
+    <dimen name="mapHeight">200dp</dimen>
+    <dimen name="galleryHeight">300dp</dimen>
+    <dimen name="splashScreenTitleSize">35dp</dimen>
+
+    <dimen name="home_imageViewHeight">400dp</dimen>
+    <dimen name="home_eventNameTextSize">15dp</dimen>
+    <dimen name="home_eventDateTextSize">13dp</dimen>
+    <dimen name="home_eventBuildingTextSize">13dp</dimen>
+
+    <dimen name="exhibition_titleSize">28dp</dimen>
+
+    <dimen name="list_image_width">100dp</dimen>
+    <dimen name="list_image_height">65dp</dimen>
+</resources>

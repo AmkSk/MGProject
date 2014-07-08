@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Moravská Galerie</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="deviceOffline">Your device is offline. Please, turn on your wifi or data connection</string>
+    <string name="connectionProblem">A problem occured while contacting the server. Please try again later</string>
+    <string name="visitButtonString">Visit</string>
+    <string name="actualButtonString">Actual</string>
+    <string name="exhibitionsButtonString">Permanent\nExhibitions</string>
+    <string name="extraButtonString">Extra</string>
+
+    <string name="permanentExhibitions">Permanent Exhibitions</string>
+
+    <string name="dialog_deviceOffline">Your device is offline</string>
+    <string name="dialog_offlineMessage">This application needs Internet connection</string>
+    <string name="dialog_turnOnWifiButton">Turn on WiFi</string>
+    <string name="dialog_retry">Retry</string>
+
+    <string name="youtube_channel">MG YouTube channel</string>
+    <string name="biennial">Brno Biennial</string>
+    <string name="biennialFB">Brno Biennial Facebook</string>
+    <string name="calendar">Calendar</string>
+    <string name="authors">Authors</string>
+    <string name="shareFb">Share on FB</string>
+    <string name="shareTw">Share on Twitter</string>
+    <string name="linkFb">Link to Facebook</string>
+    <string name="linkTw">Link to Twitter</string>
+
+    <string name="eventsAndActualities">Events and actualities</string>
+    <string name="exhibitions">Exhibitions</string>
+
+
+    <string name="authorsAbout">Author of Android application:\nAndrej Martinák\nandrej.martinak@gmail.com\n\nAuthor of iOS application:\nMichal Ziman\nmichalziman@me.com</string>
+
+    <string name="aboutGalleryString">The Moravian Gallery in Brno, the second largest art museum in the Czech Republic, is exceptional for the wide range of artistic disciplines it covers. It is the only institution in the coutry collecting visual art that is concerned with paintig, drawing, graphic art and sculptore - from the past and the present - as well as photography, applied art and design.\n\nThe Moravian Gallery in Brno comprises five buildings in total. Four of these are in Brno - they include Museum of Applied Arts, the Pražák Palace and Governor\'s place. Another building is the former house of Dušan S. Jurkovič  The Jurkovič House in Brno-Žabovřesky. Since 2006, the Moravian Gallery is in charge, in collaboration with the MAK in Vienna, of Josef Hoffmann\'s Birthplace Josef Hoffmann House near Jihlava.\n\nThe Moravian Gallery in Brno sets out to present visual culture from within the Czech Republic in a European context, both through permanent and temporary exhibitions. To achieve its goals it works together with a number of institutions at home and abroad and participates in international projects. At a global level the most renowned event organized by the Moravian Gallery in Brno is International Biennale of Graphic Design taking place here since 1963.\n\n  The temporary displays and permanent exhibitions are enriched by an accompanying programme of lectures, guided tours, workshops, concerts and performances created to suit the whole rostrum of visitors. Special attention is paid to children, whether visiting individually or as school groups.</string>
+    <string name="title_activity_extra">ExtraActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="since">Since</string>
+    <string name="until">until</string>
+
+</resources>

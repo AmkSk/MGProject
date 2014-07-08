@@ -1,0 +1,6 @@
+include ':MG'
+include 'google-play-services_lib'
+include 'maps'
+project(':maps').projectDir = new File('libs/stack/maps')
+project(':google-play-services_lib').projectDir = new File('libs/stack/google-play-services_lib')
+

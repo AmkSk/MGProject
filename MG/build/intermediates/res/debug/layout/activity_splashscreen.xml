@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textColor="#000"
+        android:textSize="@dimen/splashScreenTitleSize"
+        android:layout_marginTop="30dp"
+        android:id="@+id/splashTitleText"
+        />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/splashTitleText"
+        android:layout_marginTop="80dp"/>
+
+</RelativeLayout>
+<!-- From: file:/Users/amk/Documents/workspace/MGProject/MG/src/main/res/layout/activity_splashscreen.xml -->

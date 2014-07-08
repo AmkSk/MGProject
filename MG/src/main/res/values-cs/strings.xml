@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Moravská Galerie</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="deviceOffline">Vaše zařízení je offline. Zapněte si wifi nebo mobilní data.</string>
+    <string name="connectionProblem">Při kontaktování serveru nastala chyba. Skuste to, prosím, později.</string>
+    <string name="visitButtonString">Návštěva</string>
+    <string name="actualButtonString">Aktuálně</string>
+    <string name="exhibitionsButtonString">Stálé výstavy</string>
+    <string name="extraButtonString">Extra</string>
+
+    <string name="permanentExhibitions">Stálé výstavy</string>
+
+    <string name="dialog_deviceOffline">Vaše zařízení je offline</string>
+    <string name="dialog_offlineMessage">Tato aplikace vyžaduje připojení k Internetu</string>
+    <string name="dialog_turnOnWifiButton">Zapnout WiFi</string>
+    <string name="dialog_retry">Skusit znovu</string>
+
+    <string name="youtube_channel">YouTube kanál MG</string>
+    <string name="biennial">Bienále Brno</string>
+    <string name="biennialFB">Bienále Brno Facebook</string>
+    <string name="authors">Autoři</string>
+    <string name="calendar">Kalendář</string>
+    <string name="shareFb">Sdílej na FB</string>
+    <string name="shareTw">Sdílej na Twittru</string>
+    <string name="linkFb">Odkaz na Facebook</string>
+    <string name="linkTw">Odkaz na Twitter</string>
+
+    <string name="eventsAndActualities">Události a aktuality</string>
+    <string name="exhibitions">Výstavy</string>
+
+    <string name="authorsAbout">Autor Android aplikace:\nAndrej Martinák\nandrej.martinak@gmail.com\n\nAutor iOS aplikace:\nMichal Ziman\nmichalziman@me.com</string>
+
+    <string name="aboutGalleryString">Moravská galerie v Brně je výjimečná šíří svého záběru. Jako jediné muzeum umění v České republice se zabývá výtvarnou kulturou zcela komplexně. Pracuje jak s volným uměním, tedy malbou, kresbou, grafikou a plastikou od nejstaršího období po současnost,  tak s fotografií, užitým uměním, grafickým designem a architekturou.\n\nMoravská galerie v Brně – to je jedna galerie a pět budov. Tři z nich se nacházejí přímo v centru města Brna - Uměleckoprůmyslové muzeum, Pražákův palác a Místodržitelský palác, v brněnských Žabovřeskách se nachází Jurkovičova vila – unikátní stavba významného architekta Dušana Jurkoviče a Rodný dům Josefa Hoffmanna můžete navštívit v Brtnici nedaleko Jihlavy.\n\nMoravská galerie v Brně prezentuje výtvarnou kulturu území České republiky v evropském kontextu, a to jak ve stálých expozicích, tak prostřednictvím krátkodobých výstav. S tímto úsilím souvisí i spolupráce s řadou tuzemských i zahraničních institucí a účast na mezinárodních projektech. V celosvětovém měřítku má z aktivit Moravské galerie v Brně největší význam Mezinárodní bienále grafického designu pořádané od roku 1963.\n\nVýstavy i expozice obohacuje doprovodný program ve formě přednášek, komentovaných prohlídek výstav, dílen, koncertů a performancí koncipovaný pro návštěvníky různých věkových kategorií. Pestrá nabídka akcí je připravována pro návštěvníky s odlišným osobním či profesním zájmem.</string>
+
+    <string name="since">Od</string>
+    <string name="until">do</string>
+</resources>

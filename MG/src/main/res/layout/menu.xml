@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <View
+            android:id="@+id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separator"
+            android:layout_marginTop="7dp">
+
+        <Button
+                style="@style/blackButton"
+                android:id="@+id/visitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/visitButtonString"
+                android:layout_gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+
+        <Button
+                style="@style/blackButton"
+                android:id="@+id/actualButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/actualButtonString"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/visitButton"/>
+
+        <Button
+                style="@style/blackButton"
+                android:id="@+id/exhibitionsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/exhibitionsButtonString"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/actualButton"/>
+
+        <Button
+                style="@style/blackButton"
+                android:id="@+id/extraButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text="@string/extraButtonString"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/exhibitionsButton"/>
+    </LinearLayout>
+</RelativeLayout>
