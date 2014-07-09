@@ -21,7 +21,7 @@ import com.mg.objects.MGEntry;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExhibitonsListActivity extends Activity{
+public class ExhibitionsListActivity extends Activity{
     // =============================================================================
     // Fields
     // =============================================================================
