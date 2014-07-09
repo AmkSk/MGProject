@@ -5,7 +5,6 @@ import android.graphics.Color;
 import com.dd.plist.NSArray;
 import com.dd.plist.NSDate;
 import com.dd.plist.NSDictionary;
-import com.mg.androidapp.common.AppManager;
 import com.mg.objects.Actuality;
 import com.mg.objects.Building;
 import com.mg.objects.Exhibition;
@@ -16,15 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by amk on 14.10.2013.
+ * Contains methods for parsing all types of plist files:
+ * Buildings, Actulalities, Exhibitions (Events are processed the same way as Exhibitions)
  */
 public class PlistParser{
-    // =============================================================================
-    // Fields
-    // =============================================================================
-
-    AppManager appManager = AppManager.getInstance();
-
     // =============================================================================
     // Constructors
     // =============================================================================
@@ -195,12 +189,4 @@ public class PlistParser{
         }
         return exhibitionList;
     }
-
-    private void bla(){
-
-    }
-
-    // =============================================================================
-    // Subclasses
-    // =============================================================================
 }

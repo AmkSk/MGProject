@@ -3,9 +3,6 @@ package com.mg.objects;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by amk on 10.9.2013.
- */
 public class Building extends MGEntry{
 
     // =============================================================================

@@ -37,6 +37,9 @@ import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Activity displaying all relevant information of the MG Building
+ */
 public class BuildingActivity extends FragmentActivity {
 
     // =============================================================================
@@ -89,8 +92,6 @@ public class BuildingActivity extends FragmentActivity {
             initMap();
         }
 
-
-
         // building information initialization
         initBuildingInfo();
 
@@ -116,14 +117,10 @@ public class BuildingActivity extends FragmentActivity {
             appManager.log("Building Image Download", "INFO: Downloading image "+image.getId());
             loader.loadImage(appManager.createImageURI(image.getId()), new ImageLoadingListener() {
                 @Override
-                public void onLoadingStarted(String s, View view) {
-
-                }
+                public void onLoadingStarted(String s, View view) {}
 
                 @Override
-                public void onLoadingFailed(String s, View view, FailReason failReason) {
-
-                }
+                public void onLoadingFailed(String s, View view, FailReason failReason) {}
 
                 @Override
                 public void onLoadingComplete(String s, View view, Bitmap bitmap) {
@@ -132,9 +129,7 @@ public class BuildingActivity extends FragmentActivity {
                 }
 
                 @Override
-                public void onLoadingCancelled(String s, View view) {
-
-                }
+                public void onLoadingCancelled(String s, View view) {}
             });
         }
     }

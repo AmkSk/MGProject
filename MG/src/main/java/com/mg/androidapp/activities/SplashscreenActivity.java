@@ -36,7 +36,9 @@ import java.util.Calendar;
 import java.util.concurrent.ExecutionException;
 
 /**
- * Created by amk on 13.9.2013.
+ * Checks internet connection
+ * Checks if data online have changed
+ * Downloads and processes all plist files from the server
  */
 public class SplashscreenActivity extends Activity {
 
@@ -201,7 +203,7 @@ public class SplashscreenActivity extends Activity {
         }
 
         /**
-         * Method that a plist file from the server
+         * Method that downloads a plist file from the server
          * @param name - name of the p list
          * @throws ExecutionException
          * @throws InterruptedException
@@ -264,8 +266,5 @@ public class SplashscreenActivity extends Activity {
             }
             else return false;
         }
-
-
     }
-
 }

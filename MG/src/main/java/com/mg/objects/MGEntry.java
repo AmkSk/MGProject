@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The base object of MG
+ * The basic object of MG
  */
 public class MGEntry {
 

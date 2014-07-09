@@ -17,7 +17,8 @@ import com.mg.objects.MGEntry;
 import java.util.List;
 
 /**
- * Created by amk on 11.4.2014.
+ * Contains a simple list of Actualities
+ * - uses UniversalAdapter
  */
 public class ActualityListActivity extends Activity{
     // =============================================================================

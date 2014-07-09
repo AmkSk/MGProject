@@ -59,7 +59,7 @@
             android:theme="@style/MGAppTheme" />
 
         <activity
-            android:name=".activities.ExhibitonsListActivity"
+            android:name=".activities.ExhibitionsListActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/MGAppTheme" />
 

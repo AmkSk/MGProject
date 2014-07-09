@@ -1,8 +1,5 @@
 package com.mg.objects;
 
-/**
- * Created by amk on 10.9.2013.
- */
 public class Image {
     // =============================================================================
     // Fields

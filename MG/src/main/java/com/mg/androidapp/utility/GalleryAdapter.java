@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by amk on 18.9.2013.
+ * Adapter for Gallery View used in EntryActivity and BuildingActivity
  */
 public class GalleryAdapter extends PagerAdapter {
     Context context;

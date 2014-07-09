@@ -6,8 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.mg.androidapp.R;
@@ -16,12 +14,8 @@ import com.mg.objects.Building;
 import com.mg.objects.Exhibition;
 import com.mg.objects.MGEntry;
 
-import java.util.Calendar;
 import java.util.List;
 
-/**
- * Created by amk on 8.7.2014.
- */
 public class CalendarAdapter extends ArrayAdapter<Exhibition> {
     // =============================================================================
     // Fields
@@ -46,7 +40,7 @@ public class CalendarAdapter extends ArrayAdapter<Exhibition> {
     }
 
     // =============================================================================
-    // Overriden methods
+    // Override methods
     // =============================================================================
 
     @Override

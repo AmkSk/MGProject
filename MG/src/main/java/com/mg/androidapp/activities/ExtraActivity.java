@@ -24,9 +24,8 @@ public class ExtraActivity extends Activity{
     AppManager appManager;
 
     // =============================================================================
-    // Overriden methods
+    // Override methods
     // =============================================================================
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +39,9 @@ public class ExtraActivity extends Activity{
     }
 
 
-// =============================================================================
+    // =============================================================================
     // Methods
     // =============================================================================
-
 
     public void youtube_onClick(View v){
         try {

@@ -21,6 +21,9 @@ import com.mg.objects.MGEntry;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Used for displaying both Exhibitions and Constant Exhibitions
+ */
 public class ExhibitionsListActivity extends Activity{
     // =============================================================================
     // Fields

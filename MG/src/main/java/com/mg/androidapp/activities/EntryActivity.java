@@ -32,6 +32,9 @@ import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 
 import java.util.List;
 
+/**
+ * Used for displaying Actualities, Events, Exhibitions, Constant Exhibitions
+ */
 public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener{
 
     // =============================================================================
@@ -106,14 +109,10 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
             appManager.log("Exhibition Image Download", "INFO: Downloading image "+image.getId());
             loader.loadImage(appManager.createImageURI(image.getId()), new ImageLoadingListener() {
                 @Override
-                public void onLoadingStarted(String s, View view) {
-
-                }
+                public void onLoadingStarted(String s, View view) {}
 
                 @Override
-                public void onLoadingFailed(String s, View view, FailReason failReason) {
-
-                }
+                public void onLoadingFailed(String s, View view, FailReason failReason) {}
 
                 @Override
                 public void onLoadingComplete(String s, View view, Bitmap bitmap) {
@@ -122,9 +121,7 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
                 }
 
                 @Override
-                public void onLoadingCancelled(String s, View view) {
-
-                }
+                public void onLoadingCancelled(String s, View view) {}
             });
         }
     }
@@ -165,7 +162,7 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
         String editedInfo = infoText.replace("\\" + "n", lineSep);
         infoTextView.setText(editedInfo);
 
-        //date
+        // Date
         TextView date = (TextView) findViewById(R.id.exhibitions_dateTextView);
 
         if (this.entry.getKind().equals("Constant Exhibition") || this.entry.getKind().equals("Actual")){
@@ -219,6 +216,10 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
         }
     }
 
+    /**
+     * Fills the buildingList (if necessary) and starts new BuildingActivity
+     * @param v
+     */
     public void building_onClick(View v){
         Button buildingButton = (Button) v;
         String buildingId = (String) buildingButton.getText();
@@ -234,7 +235,6 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
             }
 
             buildingList = PlistParser.parseBuildingsArray(array);
-
             appManager.setBuildingList(buildingList);
         }
         else buildingList = appManager.getBuildingList();

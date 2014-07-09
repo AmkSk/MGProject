@@ -10,17 +10,15 @@ import android.widget.ListView;
 import com.mg.androidapp.R;
 import com.mg.androidapp.common.AppManager;
 import com.mg.androidapp.utility.CalendarAdapter;
-import com.mg.androidapp.utility.UniversalAdapter;
-import com.mg.objects.Building;
 import com.mg.objects.Exhibition;
-import com.mg.objects.MGEntry;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by amk on 8.7.2014.
+ * Calendar of all exhibitions and events
+ * The list uses its own adapter - CalendarAdapter
  */
 public class CalendarActivity extends Activity{
     // =============================================================================
@@ -58,12 +56,6 @@ public class CalendarActivity extends Activity{
     // =============================================================================
     // Methods
     // =============================================================================
-
-    private void sortTest (){
-        for (Exhibition item : itemList){
-            appManager.log("test", "INFO: " + item.getDateFrom().getTime());
-        }
-    }
 
     private void initListView(){
         this.listView = (ListView)findViewById(R.id.calendar_ListView);

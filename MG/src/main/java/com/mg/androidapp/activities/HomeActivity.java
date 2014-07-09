@@ -31,6 +31,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The first activity after Splashscreen
+ * - Cycles through Exhibitions, Actualities, Events and Buildings and shows relevant info about them
+ */
 public class HomeActivity extends Activity implements OnActualityChanged {
 
     // =============================================================================
@@ -128,9 +132,7 @@ public class HomeActivity extends Activity implements OnActualityChanged {
         this.fadeIn.setDuration(Constants.FADEIN);
         this.fadeIn.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-
-            }
+            public void onAnimationStart(Animation animation) {}
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -138,9 +140,7 @@ public class HomeActivity extends Activity implements OnActualityChanged {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
+            public void onAnimationRepeat(Animation animation) {}
         });
 
         this.fadeOut = new AlphaAnimation(1, 0);
@@ -149,8 +149,7 @@ public class HomeActivity extends Activity implements OnActualityChanged {
         this.fadeOut.setDuration(Constants.FADEOUT);
         this.fadeOut.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-            }
+            public void onAnimationStart(Animation animation) {}
 
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -158,9 +157,7 @@ public class HomeActivity extends Activity implements OnActualityChanged {
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
+            public void onAnimationRepeat(Animation animation) {}
         });
     }
 
@@ -176,14 +173,10 @@ public class HomeActivity extends Activity implements OnActualityChanged {
             imgLoader = ImageLoader.getInstance();
             imgLoader.loadImage(appManager.createImageURI(imageId), new ImageLoadingListener() {
                 @Override
-                public void onLoadingStarted(String s, View view) {
-
-                }
+                public void onLoadingStarted(String s, View view) {}
 
                 @Override
-                public void onLoadingFailed(String s, View view, FailReason failReason) {
-
-                }
+                public void onLoadingFailed(String s, View view, FailReason failReason) {}
 
                 @Override
                 public void onLoadingComplete(String s, View view, Bitmap bitmap) {
@@ -199,15 +192,15 @@ public class HomeActivity extends Activity implements OnActualityChanged {
                 }
 
                 @Override
-                public void onLoadingCancelled(String s, View view) {
-
-                }
+                public void onLoadingCancelled(String s, View view) {}
             });
         }
     }
 
     /**
-     * Sets data from next entry in the
+     * Prepares next entry to be shown
+     * - Fills the UI with data of the entry
+     * - Starts the animation
      */
     private void nextEntry(){
         if (entryList.isEmpty()){
@@ -244,10 +237,6 @@ public class HomeActivity extends Activity implements OnActualityChanged {
         });
 
         MGEntry currentEntry =  entryList.get(entryIndex);
-
-//        String imageId = appManager.createImageURI(currentEntry.getImage(0).getId());
-//        ImageLoader loader = ImageLoader.getInstance();
-//        loader.displayImage(imageId, imageView);
 
         Bitmap bitmap = this.imageMap.get(appManager.createImageURI(currentEntry.getImage(0).getId()));
         this.imageView.setImageBitmap(bitmap);

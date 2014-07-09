@@ -6,7 +6,8 @@ import android.view.MotionEvent;
 import android.widget.ScrollView;
 
 /**
- * Created by amk on 19.9.2013.
+ * Custom ScrollView, used in BuildingActivity because of Google Maps Fragment
+ * (Without this the user would not be able to scroll the scrollview with the map)
  */
 public class VerticalOnlyScrollView extends ScrollView {
     private Context context;

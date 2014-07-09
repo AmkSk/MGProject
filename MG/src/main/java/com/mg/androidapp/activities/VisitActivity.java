@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by amk on 11.9.2013.
+ * Shows a list of Buildings of MG including "About Gallery" section
  */
 public class VisitActivity extends Activity{
 
@@ -113,6 +113,11 @@ public class VisitActivity extends Activity{
         listView.setAdapter(adapter);
     }
 
+    /**
+     * Manuallly creates a fictive building "About gallery"
+     * - hard-coded text and image identifiers
+     * @return
+     */
     private Building createAboutGallery(){
         Building aboutGallery = new Building();
         aboutGallery.setKind("Building");

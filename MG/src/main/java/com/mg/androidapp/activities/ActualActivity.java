@@ -24,7 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by amk on 3.12.2013.
+ * A "crossroad" for Events and Exhibitions
+ * - processes images for both buttons
  */
 public class ActualActivity extends Activity{
 
@@ -98,14 +99,10 @@ public class ActualActivity extends Activity{
 
         imgLoader.loadImage(appManager.createImageURI(actImageId), targetSize, new ImageLoadingListener() {
             @Override
-            public void onLoadingStarted(String s, View view) {
-
-            }
+            public void onLoadingStarted(String s, View view) {}
 
             @Override
-            public void onLoadingFailed(String s, View view, FailReason failReason) {
-
-            }
+            public void onLoadingFailed(String s, View view, FailReason failReason) {}
 
             @Override
             public void onLoadingComplete(String s, View view, Bitmap bitmap) {
@@ -119,21 +116,15 @@ public class ActualActivity extends Activity{
             }
 
             @Override
-            public void onLoadingCancelled(String s, View view) {
-
-            }
+            public void onLoadingCancelled(String s, View view) {}
         });
 
         imgLoader.loadImage(appManager.createImageURI(exhibitionsImageId), targetSize, new ImageLoadingListener() {
             @Override
-            public void onLoadingStarted(String s, View view) {
-
-            }
+            public void onLoadingStarted(String s, View view) {}
 
             @Override
-            public void onLoadingFailed(String s, View view, FailReason failReason) {
-
-            }
+            public void onLoadingFailed(String s, View view, FailReason failReason) {}
 
             @Override
             public void onLoadingComplete(String s, View view, Bitmap bitmap) {
@@ -147,9 +138,7 @@ public class ActualActivity extends Activity{
             }
 
             @Override
-            public void onLoadingCancelled(String s, View view) {
-
-            }
+            public void onLoadingCancelled(String s, View view) {}
         });
     }
 
@@ -163,7 +152,7 @@ public class ActualActivity extends Activity{
 
     public void exhibitions_onClick(View v){
         appManager.log("Activity launch", "INFO: launching EXHIBITIONS LIST Activity");
-        Intent intent = new Intent(this, ExhibitonsListActivity.class);
+        Intent intent = new Intent(this, ExhibitionsListActivity.class);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         intent.putExtra("constant", false);
         this.startActivity(intent);

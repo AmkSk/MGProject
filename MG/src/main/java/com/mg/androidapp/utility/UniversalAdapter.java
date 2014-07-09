@@ -26,7 +26,9 @@ import java.util.Date;
 import java.util.List;
 
 /**
-* Adapter used to fill the list of buildings
+* Adapter used to fill the list of all MGEntry inherited classes:
+* Buildings, Exhibitions, Events, Actualities
+* - distinguishes between these classes and fills the rows with relevant data only
 */
 public class UniversalAdapter extends ArrayAdapter<MGEntry>{
 
@@ -128,7 +130,6 @@ public class UniversalAdapter extends ArrayAdapter<MGEntry>{
 
         // image downloading
         if (entry.getImageList().size() != 0){
-            //holder.image.setVisibility(View.VISIBLE);
             final String actualityImageURI = appManager.createImageURI(entry.getImage(0).getId());
 
             appManager.log("Downloading Image","INFO: Downloading Image " + actualityImageURI);

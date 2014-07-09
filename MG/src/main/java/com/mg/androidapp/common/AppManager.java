@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.dd.plist.NSArray;
 import com.dd.plist.PropertyListParser;
 import com.mg.androidapp.activities.ActualActivity;
-import com.mg.androidapp.activities.ExhibitonsListActivity;
+import com.mg.androidapp.activities.ExhibitionsListActivity;
 import com.mg.androidapp.activities.ExtraActivity;
 import com.mg.androidapp.activities.HomeActivity;
 import com.mg.androidapp.R;
@@ -38,11 +38,12 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Singleton class
+ *   Class using Singleton pattern
  * - Manages the navigation
  * - Stores urls, fb links
  * - Stores fonts
  * - Stores lists of buildings, actualities, exhibitions, constant exhibitions
+ * - Provides "utility" methods - working with .plists, paths, dates, images ...
  */
 public class AppManager extends Activity {
 
@@ -291,7 +292,7 @@ public class AppManager extends Activity {
 
     public void exhibitionsButtonClicked(Activity activity){
         this.log("Activity launch", "INFO: CONSTANT EXHIBITIONS Activity");
-        Intent intent = new Intent(activity, ExhibitonsListActivity.class);
+        Intent intent = new Intent(activity, ExhibitionsListActivity.class);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         intent.putExtra("constant", true);
         activity.startActivity(intent);
@@ -406,7 +407,7 @@ public class AppManager extends Activity {
     }
 
     /**
-     *
+     * Use this to work with the second level of the .plist file
      * @param plistFilePath - a path to the .plist file
      * @return the top <array> tag containing all the dictionaries <dict>
      * @throws Exception
@@ -487,9 +488,4 @@ public class AppManager extends Activity {
             this.actList = list;
         }
     }
-
-
-    // =============================================================================
-    //  Subclasses
-    // =============================================================================
 }
