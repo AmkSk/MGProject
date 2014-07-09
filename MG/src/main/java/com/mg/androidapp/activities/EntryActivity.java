@@ -1,15 +1,27 @@
 package com.mg.androidapp.activities;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.view.ViewPager;
+import android.text.format.DateFormat;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import com.dd.plist.NSArray;
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -30,10 +42,13 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
  * Used for displaying Actualities, Events, Exhibitions, Constant Exhibitions
+ * Distinguishes, which UI components are relevant and which should be hidden
  */
 public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener{
 
@@ -48,7 +63,7 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
     private GalleryAdapter adapter;
 
     // =============================================================================
-    // Overriden methods
+    // Override methods
     // =============================================================================
 
     @Override
@@ -165,6 +180,11 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
         // Date
         TextView date = (TextView) findViewById(R.id.exhibitions_dateTextView);
 
+        if(!this.entry.getKind().equals("Exhibition")){
+            Button notifButton = (Button) findViewById(R.id.entry_button_notif);
+            notifButton.setVisibility(View.GONE);
+        }
+
         if (this.entry.getKind().equals("Constant Exhibition") || this.entry.getKind().equals("Actual")){
             date.setVisibility(View.GONE);
         }
@@ -194,6 +214,35 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
 
     public void shareTw_onClick(View v){
 
+    }
+
+    public void notif_onClick(View v){
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View dialog_layout = inflater.inflate(R.layout.date_time_picker,(ViewGroup) findViewById(R.id.date_time_picker_root));
+
+        final TimePicker timePicker = (TimePicker) dialog_layout.findViewById(R.id.timePicker);
+        final DatePicker datePicker = (DatePicker) dialog_layout.findViewById(R.id.datePicker);
+        timePicker.setIs24HourView(true);
+
+        AlertDialog.Builder db = new AlertDialog.Builder(this);
+        db.setTitle(getString(R.string.addNotif));
+        db.setView(dialog_layout);
+        db.setPositiveButton("OK", new
+                DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Calendar cal = Calendar.getInstance();
+                        timePicker.clearFocus();
+                        cal.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
+                        cal.set(Calendar.MINUTE, timePicker.getCurrentMinute());
+                        cal.set(Calendar.DAY_OF_MONTH, datePicker.getDayOfMonth());
+                        cal.set(Calendar.MONTH, datePicker.getMonth());
+                        cal.set(Calendar.YEAR, datePicker.getYear());
+
+                        Log.i("Test datumu", "INFO: "+ appManager.getDateString(cal.getTime()) + "  " + cal.get(cal.HOUR_OF_DAY) + ":" + cal.get(cal.MINUTE));
+                    }
+                });
+        db.setNegativeButton(R.string.cancel, null);
+        db.show();
     }
 
     public void linkFb_onClick(View v){
@@ -253,5 +302,4 @@ public class EntryActivity extends YouTubeBaseActivity implements YouTubePlayer.
     // =============================================================================
     // Subclasses
     // =============================================================================
-
 }

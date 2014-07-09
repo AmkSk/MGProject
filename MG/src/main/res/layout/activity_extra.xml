@@ -88,6 +88,17 @@
                 android:onClick="calendar_onClick"/>
 
             <Button
+                android:id="@+id/extra_button_notifications"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/gray_button"
+                android:text="@string/notification_management"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:gravity="left|center_vertical"
+                android:onClick="notif_onClick"/>
+
+            <Button
                 android:id="@+id/extra_button_authors"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"

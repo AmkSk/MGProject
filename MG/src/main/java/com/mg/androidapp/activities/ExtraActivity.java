@@ -90,6 +90,12 @@ public class ExtraActivity extends Activity{
         startActivity(calendarIntent);
     }
 
+    public void notif_onClick(View v){
+        Intent calendarIntent = new Intent(this , CalendarActivity.class);
+        calendarIntent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(calendarIntent);
+    }
+
 
     public void authors_onClick(View v){
         new AlertDialog.Builder(this)

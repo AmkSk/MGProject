@@ -17,16 +17,20 @@
     <string name="dialog_offlineMessage">This application needs Internet connection</string>
     <string name="dialog_turnOnWifiButton">Turn on WiFi</string>
     <string name="dialog_retry">Retry</string>
+    <string name="cancel">Cancel</string>
+
 
     <string name="youtube_channel">MG YouTube channel</string>
     <string name="biennial">Brno Biennial</string>
     <string name="biennialFB">Brno Biennial Facebook</string>
     <string name="calendar">Calendar</string>
+    <string name="notification_management">Notification Management</string>
     <string name="authors">Authors</string>
     <string name="shareFb">Share on FB</string>
     <string name="shareTw">Share on Twitter</string>
     <string name="linkFb">Link to Facebook</string>
     <string name="linkTw">Link to Twitter</string>
+    <string name="addNotif">Set up notification</string>
 
     <string name="eventsAndActualities">Events and actualities</string>
     <string name="exhibitions">Exhibitions</string>

@@ -17,16 +17,20 @@
     <string name="dialog_offlineMessage">Tato aplikace vyžaduje připojení k Internetu</string>
     <string name="dialog_turnOnWifiButton">Zapnout WiFi</string>
     <string name="dialog_retry">Skusit znovu</string>
+    <string name="cancel">Zrušit</string>
 
     <string name="youtube_channel">YouTube kanál MG</string>
     <string name="biennial">Bienále Brno</string>
     <string name="biennialFB">Bienále Brno Facebook</string>
     <string name="authors">Autoři</string>
     <string name="calendar">Kalendář</string>
+    <string name="notification_management">Správa notifikací</string>
     <string name="shareFb">Sdílej na FB</string>
     <string name="shareTw">Sdílej na Twittru</string>
     <string name="linkFb">Odkaz na Facebook</string>
     <string name="linkTw">Odkaz na Twitter</string>
+    <string name="addNotif">Přidat notifikaci</string>
+
 
     <string name="eventsAndActualities">Události a aktuality</string>
     <string name="exhibitions">Výstavy</string>

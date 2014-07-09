@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:id="@+id/entry_root_layout">
 
     <include
         android:id="@+id/header_entry"
@@ -135,6 +136,18 @@
                 android:drawablePadding="5dp"
                 android:gravity="left|center_vertical"
                 android:onClick="shareTw_onClick" />
+
+            <Button
+                android:id="@+id/entry_button_notif"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entry_button_shareTw"
+                android:background="@drawable/gray_button"
+                android:text="@string/addNotif"
+                android:textColor="@android:color/black"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:onClick="notif_onClick" />
 
         </RelativeLayout>
     </ScrollView>

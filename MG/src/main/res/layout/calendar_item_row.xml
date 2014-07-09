@@ -13,10 +13,12 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/calendar_dateHeaderText"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/list_image_height"
             android:layout_height="wrap_content"
             android:text="19/3"
-            android:textSize="@dimen/exhibition_titleSize"/>
+            android:textSize="@dimen/exhibition_titleSize"
+            android:layout_alignParentLeft="true"
+            />
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -24,7 +26,6 @@
             android:layout_centerVertical="true"
             android:background="@drawable/gray_button"
             android:layout_toRightOf="@id/calendar_dateHeaderText"
-            android:layout_alignParentRight="true"
             android:layout_marginLeft="20dp">
 
 
